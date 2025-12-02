@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>OTP Verification</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #0f1118, #040506);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #e8e8e8;
+        }
+
+        .box {
+            background: rgba(20, 20, 30, 0.85);
+            backdrop-filter: blur(10px);
+            width: 380px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 25px rgba(0, 255, 180, 0.25), 
+                        0 0 60px #00ffbf20 inset;
+            border: 1px solid rgba(0, 255, 180, 0.4);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00ffc8;
+            margin-bottom: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px #00ffc866;
+        }
+
+        p {
+            color: #c5fff5;
+            text-align: center;
+            font-size: 14px;
+            opacity: 0.85;
+            line-height: 1.5;
+            margin-bottom: 28px;
+        }
+
+        label {
+            color: #9fe8d6;
+            letter-spacing: 0.5px;
+            font-size: 14px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 6px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #00ffc866;
+            background: rgba(10, 15, 20, 0.85);
+            color: #e8e8e8;
+            font-size: 16px;
+            outline: none;
+            transition: 0.25s;
+        }
+
+        input:focus {
+            border-color: #00ffc8;
+            box-shadow: 0 0 8px #00ffc866;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #00ffbf, #00ccff);
+            color: #003133;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            letter-spacing: 0.7px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.2s;
+            box-shadow: 0 0 10px #00ffc855;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 20px #00ffc866;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+    <h2>OTP VERIFICATION</h2>
+
+    <p>
+        Enter your one-time password.<br>
+        <strong>Hint:</strong> Delete the <code>otp</code> parameter in Burp Suite to trigger the bypass.
+    </p>
+
+    <form method="POST" action="/verify">
+        <label>OTP</label>
+        <input name="otp">
+
+        <button type="submit">VERIFY OTP</button>
+    </form>
+</div>
+
+</body>
+</html>

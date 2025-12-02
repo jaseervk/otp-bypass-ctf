@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CTF Login → OTP Challenge</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #10131a, #050608);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            background: rgba(20, 20, 30, 0.85);
+            backdrop-filter: blur(10px);
+            width: 380px;
+            padding: 30px;
+            border-radius: 12px;
+            color: #e8e8e8;
+            box-shadow: 0 0 25px rgba(0, 255, 180, 0.25), 0 0 60px #00ffbf20 inset;
+            border: 1px solid rgba(0, 255, 180, 0.4);
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #00ffc8;
+            text-shadow: 0 0 10px #00ffc855;
+            margin-bottom: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        label {
+            font-size: 14px;
+            color: #9fe8d6;
+            letter-spacing: 0.5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px 12px;
+            margin-top: 6px;
+            margin-bottom: 18px;
+            border-radius: 6px;
+            border: 1px solid #00ffc866;
+            background: rgba(10, 15, 20, 0.8);
+            color: #e8e8e8;
+            font-size: 15px;
+            outline: none;
+            transition: 0.25s;
+        }
+
+        input:focus {
+            border-color: #00ffc8;
+            box-shadow: 0 0 8px #00ffc866;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(90deg, #00ffbf, #00ccff);
+            color: #003133;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.2s;
+            box-shadow: 0 0 8px #00ffc855;
+        }
+
+        button:hover {
+            transform: scale(1.03);
+            box-shadow: 0 0 15px #00ffc866;
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        p {
+            color: #c5fff5;
+            text-align: center;
+            margin-bottom: 25px;
+            opacity: 0.85;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>CTF LOGIN</h2>
+    <p>Authenticate to access the secure OTP gateway.</p>
+
+    <form method="POST" action="/login">
+        <label>USERNAME</label>
+        <input type="text" name="username" required>
+
+        <label>PASSWORD</label>
+        <input type="password" name="password" required>
+
+        <button type="submit">ENTER SYSTEM</button>
+    </form>
+</div>
+
+</body>
+</html>
