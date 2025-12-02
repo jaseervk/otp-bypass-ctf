@@ -53,4 +53,5 @@ The only way to obtain the flag is by successfully bypassing the OTP validation.
 This project is for educational purposes only.
 Do not use these techniques on real systems without permission.
 
-© 2025 jaseervk. All rights reserved.
+© 2025 Jaseer VK. All rights reserved.
+
